@@ -1,8 +1,8 @@
 
+import 'package:byte_bank_complete_app/page/contact_form.dart';
 import 'package:flutter/material.dart';
 
 class ContactsPage extends StatelessWidget {
-  const ContactsPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +27,11 @@ class ContactsPage extends StatelessWidget {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          debugPrint('pressionou');
+          Navigator.of(context)
+            .push(
+              MaterialPageRoute(builder: (context) => ContactForm()
+            )
+          ).then((newContact) => debugPrint(newContact.toString()));
         },
         child: const Icon(Icons.add),
       ),

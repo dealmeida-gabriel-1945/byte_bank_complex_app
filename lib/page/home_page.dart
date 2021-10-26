@@ -5,11 +5,43 @@ class HomePage extends StatelessWidget{
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Transações'),
+        title: const Text('Dashboard'),
       ),
       body: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Image.asset('images/shrek.png')
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Image.asset('images/bytebank_logo.png'),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Container(
+              padding: EdgeInsets.all(8.0),
+              height: 100,
+              width: 150,
+              color: Theme.of(context).primaryColor,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: const [
+                  Icon(
+                    Icons.people,
+                    color: Colors.white,
+                    size: 38.0,
+                  ),
+                  Text(
+                    'Contacts',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize:  20.0
+                    ),
+                  )
+                ],
+              ),
+            ),
+          )
         ],
       ),
     );

@@ -56,6 +56,7 @@ class _ContactFormState extends State<ContactForm> {
       floatingActionButton: FloatingActionButton(
         onPressed: (){
           final newContact = Contact(
+            0,
             _nameController.text,
             int.tryParse(_accountNumberController.text) ?? 0
           );
